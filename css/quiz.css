@@ -1,0 +1,15 @@
+.question {
+  padding: 1rem 0;
+  border-bottom: 1px solid #e2e8f0;
+}
+.question h3 { margin: 0 0 0.65rem; font-size: 1rem; }
+.option {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.55rem;
+  margin: 0.45rem 0;
+  font-weight: 400;
+}
+.option input { flex: 0 0 auto; min-width: auto; margin-top: 0.3rem; }
+.feedback { margin: 0.6rem 0 0; color: #334155; }
+.quiz-result { margin-top: 1rem; font-weight: 650; }

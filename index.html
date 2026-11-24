@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Övningsprov 5 i JavaScript och avancerad frontendutveckling.">
+  <title>Övningsprov 5 – JavaScript</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <script type="module" src="/javascript/app.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <p class="eyebrow">Avancerad frontendutveckling</p>
+    <h1>Övningsprov 5</h1>
+    <p>Praktisk JavaScript-träning · 10 uppgifter · 30 poäng</p>
+  </header>
+
+  <main class="page">
+    <section class="panel">
+      <h2>Praktiska delen</h2>
+      <p>Välj en uppgift. Implementera den i motsvarande fil under <code>javascript/questions/</code>.</p>
+      <label for="question-select">Välj fråga</label>
+      <div class="controls">
+        <select id="question-select">
+          <option value="1">Fråga 1 – Funktioner och villkor</option>
+          <option value="2">Fråga 2 – map, filter och find</option>
+          <option value="3">Fråga 3 – reduce</option>
+          <option value="4">Fråga 4 – Spread, rest och immutability</option>
+          <option value="5">Fråga 5 – DOM-rendering</option>
+          <option value="6">Fråga 6 – DOM-events och formulär</option>
+          <option value="7">Fråga 7 – Fetch och async/await</option>
+          <option value="8">Fråga 8 – Promise och Promise.all</option>
+          <option value="9">Fråga 9 – Klasser och getters</option>
+          <option value="10">Fråga 10 – ES-moduler</option>
+        </select>
+        <button id="run-button" type="button">Kör vald fråga</button>
+      </div>
+      <p id="status" class="status" aria-live="polite">Redo. Öppna Console i utvecklarverktygen för testresultat.</p>
+    </section>
+
+    <section class="panel">
+      <h2>Testyta</h2>
+      <p id="task-description">Välj en fråga och kör den för att se eventuell DOM-utskrift här.</p>
+      <form id="task-form" class="task-form">
+        <label for="task-input">Ny uppgift</label>
+        <div class="controls">
+          <input id="task-input" type="text" placeholder="Skriv en uppgift..." autocomplete="off">
+          <button type="submit">Lägg till</button>
+        </div>
+        <p id="form-message" class="form-message" aria-live="polite"></p>
+      </form>
+      <ul id="task-list" class="task-list"></ul>
+      <ul id="course-list" class="course-list"></ul>
+      <div id="comments-output" class="comments-output"></div>
+    </section>
+
+    <section class="panel note">
+      <h2>Kom ihåg</h2>
+      <p>Om du ändrar kod medan Vite körs uppdateras sidan normalt automatiskt. Vid syntaxfel: läs felmeddelandet i terminalen och Console.</p>
+      <p><a href="/quiz.html">Gå till teoriprovet →</a></p>
+    </section>
+  </main>
+  <footer>Övningsprov 5 · Träna utan facit</footer>
+</body>
+</html>
