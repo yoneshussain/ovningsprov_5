@@ -16,14 +16,14 @@
 export const calculateFare = (distanceKm, isStudent, isPeak) => {
   // TODO: implementera funktionen
 
-  if (distanceKm === NaN || distanceKm < 0) {
+  if (Number.isNaN(distanceKm) || distanceKm < 0) {
     return null;
   }
 
   const baseFee = 20;
   const kmFee = isStudent
-    ? distanceKm * 3 * 0.25 + baseFee + (isPeak ? 15 : 0)
-    : distanceKm * 3 + baseFee;
+    ? distanceKm * 3 * 0.75 + baseFee + (isPeak ? 15 : 0)
+    : distanceKm * 3 + baseFee + (isPeak ? 15 : 0);
 
   return kmFee;
 };
