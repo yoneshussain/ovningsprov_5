@@ -15,7 +15,17 @@
 
 export const calculateFare = (distanceKm, isStudent, isPeak) => {
   // TODO: implementera funktionen
-  return null;
+
+  if (distanceKm === NaN || distanceKm < 0) {
+    return null;
+  }
+
+  const baseFee = 20;
+  const kmFee = isStudent
+    ? distanceKm * 3 * 0.25 + baseFee + (isPeak ? 15 : 0)
+    : distanceKm * 3 + baseFee;
+
+  return kmFee;
 };
 
 export function run() {
