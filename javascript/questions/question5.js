@@ -19,7 +19,29 @@ const courses = [
 ];
 
 export const renderCourses = (courses, container) => {
+  container.innerHTML = "";
   // TODO: använd map() för att skapa DOM-element
+  const li = courses.map((course) => {
+    const li = document.createElement("li");
+    const title = document.createElement("h3");
+    const hours = document.createElement("p");
+    const button = document.createElement("button");
+
+    title.textContent = course.title;
+    hours.textContent = course.hours;
+    button.textContent = "Markera klar";
+
+    button.addEventListener("click", () => {
+      li.classList.add("completed");
+      button.textContent = "Klar!";
+    });
+
+    li.append(title, hours, button);
+
+    return li;
+  });
+
+  container.append(...li);
 };
 
 export function run() {

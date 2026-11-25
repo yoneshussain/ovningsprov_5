@@ -25,12 +25,19 @@ const user = {
 
 export const updateSettings = (user, newTheme) => {
   // TODO: returnera en immutabel uppdatering
-  return user;
+
+  return {
+    ...user,
+    settings: { ...user.settings, theme: newTheme },
+  };
 };
 
 export const getPublicUser = (user) => {
   // TODO: använd rest syntax för att exkludera password
-  return user;
+
+  const { password, ...rest } = user;
+
+  return rest;
 };
 
 export function run() {
@@ -42,5 +49,8 @@ export function run() {
   console.log("Uppdaterad:", updatedUser);
   console.log("Publik användare:", publicUser);
   console.log("Samma user-referens?", user === updatedUser);
-  console.log("Samma settings-referens?", user.settings === updatedUser.settings);
+  console.log(
+    "Samma settings-referens?",
+    user.settings === updatedUser.settings,
+  );
 }
