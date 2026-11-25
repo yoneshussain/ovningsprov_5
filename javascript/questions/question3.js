@@ -16,7 +16,12 @@ const orders = [
 
 export const calculatePaidRevenue = (orders) => {
   // TODO: implementera med reduce()
-  return 0;
+
+  return orders.reduce(
+    (sum, order) =>
+      sum + (order.status === "paid" ? order.quantity * order.unitPrice : 0),
+    0,
+  );
 };
 
 export function run() {
