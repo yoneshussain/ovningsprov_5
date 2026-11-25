@@ -16,7 +16,7 @@
 export const calculateFare = (distanceKm, isStudent, isPeak) => {
   // TODO: implementera funktionen
 
-  if (Number.isNaN(distanceKm) || distanceKm < 0) {
+  if (Number.isNaN(distanceKm) || typeof distanceKm !== "number" || distanceKm < 0) {
     return null;
   }
 

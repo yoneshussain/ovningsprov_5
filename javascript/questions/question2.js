@@ -17,17 +17,17 @@ const orders = [
 
 export const getCustomerNames = (orders) => {
   // TODO: använd map()
-  return [];
+  return orders.map((order) => order.customer);
 };
 
 export const getLargeOpenOrders = (orders) => {
   // TODO: använd filter()
-  return [];
+  return orders.filter((order) => order.status === "open" && order.total > 500);
 };
 
 export const findOrderById = (orders, id) => {
   // TODO: använd find()
-  return undefined;
+  return orders.find((order) => order.id === id);
 };
 
 export function run() {
